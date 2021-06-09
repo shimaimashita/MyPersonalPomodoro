@@ -2,3 +2,4 @@
 test/
 *.sh
 TODO.txt
+*.out
