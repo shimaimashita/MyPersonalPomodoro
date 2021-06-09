@@ -1,0 +1,4 @@
+*.[oa]
+test/
+*.sh
+TODO.txt
