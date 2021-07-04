@@ -24,14 +24,19 @@ int main()
 	WINDOW *mpp_main_window, *mpp_left_window, *mpp_right_window;
 	mpp_left_window = mpp_create_left_win(&main_window);
 	mpp_right_window = mpp_create_right_win(&main_window);
+
 	while((main_char = getch()) != escape_key) {
+
 		if (main_char == KEY_RESIZE) {
 			mpp_destroy_win(mpp_left_window);
 			mpp_destroy_win(mpp_right_window);
+
 			getmaxyx(stdscr, main_window.height, main_window.width);
+
 			mpp_left_window = mpp_create_left_win(&main_window);
 			mpp_right_window = mpp_create_right_win(&main_window);
 		}
+
 	}
 	endwin();
 	return 0;
